@@ -8,4 +8,9 @@ router.get('/', (req, res) => {
 })
 
 router.get('/posts', mainApiController.posts);
+/**
+ * router for product
+ */
+
+ router.get('/products', mainApiController.getProducts);
 module.exports = router;
