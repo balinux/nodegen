@@ -5,7 +5,7 @@ const router = express.Router();
 router.use('/api', require("./api/v1"));
 
 router.get('/', (req, res) => {
-    res.send('tes index ')
+    res.send('integrated with CI/CD ')
 })
 router.get('/route-with-controller', mainController.showEvent);
 
