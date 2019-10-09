@@ -1,7 +1,7 @@
 FROM node:9-slim
 WORKDIR /app
-COPY package.json /app
+COPY package*.json ./
 RUN npm install
-COPY . /app
-CMD [ "npm","start" ]
-EXPOSE 8000
+COPY . .
+EXPOSE 9999
+CMD [ "node","index.js" ]
