@@ -20,6 +20,9 @@ step-deploy-prod:
   only:
     - master
   script:
+    - apt-get install -y python-pip
+    - pip install --upgrade setuptools
+    - pip install docker-compose
     - docker image prune -f
     - docker-compose build --no-cache
     - docker-compose up -d
