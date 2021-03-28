@@ -5,7 +5,7 @@ const router = express.Router();
 router.use('/api', require("./api/v1"));
 
 router.get('/', (req, res) => {
-    res.send('integrated with CI/CD USDI')
+    res.status(200).json({status:true, message: "response data success"})
 })
 router.get('/route-with-controller', mainController.showEvent);
 
